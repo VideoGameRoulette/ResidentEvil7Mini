@@ -164,24 +164,6 @@ function appendData(data) {
 	</div>
 	<div id="valueBoss"><font size="4" color="#ff0000">0</font></div>`
 
-	mainContainer.innerHTML += `
-	<div class="tag">
-		<i class="fas fa-street-view"></i>
-	</div>
-	<div id="valueBoss"><font size="4" color="#FFF">${data.MrEverything}</font></div>`
-
-	mainContainer.innerHTML += `
-	<div class="tag">
-		<i class="fas fa-file"></i>
-	</div>
-	<div id="valueBoss"><font size="4" color="#FFF">${data.FileCount}</font></div>`
-
-	mainContainer.innerHTML += `
-	<div class="tag">
-		<i class="fas fa-coins"></i>
-	</div>
-	<div id="valueBoss"><font size="4" color="#FFF">${data.CoinCount}</font></div>`
-
 	var BossHP = document.getElementById('valueBoss');
 
 	var filterdEnemies = data.EnemyHealth.filter(m => { return (m.MaximumHP != 150 && m.MaximumHP != 1000 && m.MaximumHP != 1100 && m.MaximumHP != 999999 && m.CurrentHP != 0 && isBoss(CurrentMap, m)) });
